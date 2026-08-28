@@ -181,11 +181,9 @@ button, a, summary { -webkit-tap-highlight-color: transparent; }
 .keywrd-card li span { background: rgba(255,255,255,.15); color: white; }
 
 .process-section { background: white; }
-.process-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
-.process-step { padding-right: 26px; }
-.step-top { display: flex; align-items: center; margin-bottom: 27px; }
-.step-top span { display: grid; flex: 0 0 44px; height: 44px; place-items: center; border: 1px solid #bdd4fa; border-radius: 50%; background: var(--blue-soft); color: var(--blue); font-family: var(--font-geist-mono); font-size: 12px; font-weight: 700; }
-.step-top i { width: 100%; height: 1px; margin-left: 12px; background: repeating-linear-gradient(to right, #bed0e8 0, #bed0e8 5px, transparent 5px, transparent 10px); }
+.process-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; max-width: 920px; margin: 0 auto; }
+.process-step { display: grid; grid-template-columns: 92px 1fr; gap: 22px; align-items: center; min-height: 138px; border: 1px solid var(--line); border-radius: 18px; padding: 22px 26px; }
+.process-number { color: var(--blue); font-size: 52px; font-weight: 500; letter-spacing: -.07em; line-height: 1; }
 .process-step h3 { margin: 0 0 11px; font-size: 20px; letter-spacing: -.03em; }
 .process-step p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.62; }
 
@@ -218,9 +216,9 @@ button, a, summary { -webkit-tap-highlight-color: transparent; }
 .dot-a { left: 29%; top: 65%; }.dot-b { left: 62%; top: 45%; }.dot-c { right: 0; top: 18%; }
 .chart-months { display: flex; justify-content: space-between; margin: 8px 0 0 30px; color: #96a1b1; font-size: 8px; }
 
-.help-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; }
-.help-grid article { border: 1px solid var(--line); border-radius: 15px; padding: 25px 22px; }
-.help-grid article > span { display: grid; width: 38px; height: 38px; place-items: center; margin-bottom: 28px; border-radius: 9px; background: var(--blue-soft); color: var(--blue); font-size: 17px; }
+.help-grid { display: grid; grid-template-columns: repeat(2, 1fr); column-gap: 58px; max-width: 980px; margin: 0 auto; }
+.help-grid article { display: grid; grid-template-columns: 58px 1fr; gap: 20px; align-items: center; border-bottom: 1px solid var(--line); padding: 25px 0; }
+.help-grid article > span { display: grid; width: 54px; height: 54px; place-items: center; border-radius: 14px; background: var(--blue-soft); color: var(--blue); font-size: 20px; }
 
 .about-section { position: relative; overflow: hidden; border-block: 1px solid #e5ebf2; background: linear-gradient(120deg, #fbfdff, #f1f6fc); }
 .about-section::after { position: absolute; top: -140px; right: -100px; width: 420px; height: 420px; border: 1px solid #dce8f7; border-radius: 50%; content: ""; box-shadow: 0 0 0 55px rgba(220,232,247,.26), 0 0 0 110px rgba(220,232,247,.16); }
@@ -306,7 +304,7 @@ footer .logo { border-radius: 8px; background: white; padding: 2px 4px; }
   .why-grid, .data-grid, .about-grid, .faq-grid { grid-template-columns: 1fr; }
   .why-copy, .data-copy { max-width: 700px; }
   .comparison { max-width: 700px; }
-  .process-grid { grid-template-columns: repeat(2, 1fr); gap: 42px 0; }
+  .process-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
   .help-grid { grid-template-columns: repeat(2, 1fr); }
   .faq-intro { position: static; }
 }
@@ -340,12 +338,9 @@ footer .logo { border-radius: 8px; background: white; padding: 2px 4px; }
   .problem-card:last-child { grid-column: auto; }
   .service-card { min-height: 240px; }
   .agency-card { transform: none; }
-  .process-grid { grid-template-columns: 1fr; gap: 0; }
-  .process-step { position: relative; min-height: 150px; padding: 0 0 33px 67px; }
-  .step-top { position: absolute; left: 0; top: 0; flex-direction: column; height: 100%; }
-  .step-top i { width: 1px; height: 100%; margin: 10px 0 0; background: repeating-linear-gradient(to bottom, #bed0e8 0, #bed0e8 5px, transparent 5px, transparent 10px); }
-  .process-step:last-child { min-height: auto; }
-  .process-step:last-child .step-top { height: auto; }
+  .process-grid { grid-template-columns: 1fr; gap: 12px; }
+  .process-step { grid-template-columns: 64px 1fr; gap: 14px; min-height: 122px; padding: 18px 20px; }
+  .process-number { font-size: 42px; }
   .data-dashboard { padding: 20px 17px; }
   .data-dashboard-head button { display: none; }
   .data-metrics { grid-template-columns: repeat(2, 1fr); }

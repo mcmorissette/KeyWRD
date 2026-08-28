@@ -275,10 +275,10 @@ export default function Home() {
           <div className="container">
             <SectionHeading eyebrow="Simple by design" title="From strategy to stronger sales." body="A clear four-step process keeps your campaigns aligned, accountable, and moving toward meaningful growth." />
             <div className="process-grid">
-              {process.map(([num, title, text], index) => (
+              {process.map(([num, title, text]) => (
                 <article className="process-step" key={num}>
-                  <div className="step-top"><span>{num}</span>{index < 3 && <i aria-hidden="true"></i>}</div>
-                  <h3>{title}</h3><p>{text}</p>
+                  <strong className="process-number">{num}</strong>
+                  <div><h3>{title}</h3><p>{text}</p></div>
                 </article>
               ))}
             </div>
@@ -334,7 +334,7 @@ export default function Home() {
                 ["◇", "B2B", "Reach decision-makers with longer buying journeys."],
                 ["✦", "Specialized & Niche", "Build focused demand in precise, competitive markets."],
               ].map(([icon, title, text]) => (
-                <article key={title}><span aria-hidden="true">{icon}</span><h3>{title}</h3><p>{text}</p></article>
+                <article key={title}><span aria-hidden="true">{icon}</span><div><h3>{title}</h3><p>{text}</p></div></article>
               ))}
             </div>
           </div>
