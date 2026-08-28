@@ -77,11 +77,11 @@ const process = [
   ["04", "Optimize", "Continuously improve performance based on real data."],
 ];
 
-function Logo() {
+function Logo({ inverse = false }: { inverse?: boolean }) {
   return (
     <a className="logo" href="#top" aria-label="KeyWRD home">
       <Image
-        src="/keywrd-logo.svg"
+        src={inverse ? "/keywrd-logo-white.svg" : "/keywrd-logo.svg"}
         alt="KeyWRD"
         width={154}
         height={43}
@@ -381,7 +381,7 @@ export default function Home() {
 
       <footer>
         <div className="container footer-top">
-          <div><Logo /><p>Performance advertising powered by direct expertise and smarter technology.</p></div>
+          <div><Logo inverse /><p>Performance advertising powered by direct expertise and smarter technology.</p></div>
           <div className="footer-links"><a href="#services">Advertising Management</a><a href="#technology">ClickSensei</a><Link href="/privacy" scroll>Privacy</Link><OpenContactLink>Contact</OpenContactLink></div>
         </div>
         <div className="container footer-bottom"><span>© 2026 KeyWRD. All rights reserved.</span><span>Smarter campaigns. Stronger results.</span></div>

@@ -260,7 +260,7 @@ button, a, summary { -webkit-tap-highlight-color: transparent; }
 
 footer { background: #0d1726; color: white; }
 .footer-top { display: flex; justify-content: space-between; align-items: flex-start; padding-top: 54px; padding-bottom: 42px; }
-footer .logo { border-radius: 8px; background: white; padding: 2px 4px; }
+footer .logo { background: transparent; padding: 0; }
 .footer-top > div:first-child p { max-width: 350px; margin: 17px 0 0; color: #8996a9; font-size: 13px; line-height: 1.6; }
 .footer-links { display: flex; gap: 29px; padding-top: 10px; color: #b2bcc9; font-size: 13px; }
 .footer-links a:hover { color: white; }
