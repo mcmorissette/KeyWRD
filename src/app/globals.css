@@ -21,6 +21,7 @@
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+#services, #process, #technology, #faq { scroll-margin-top: -23px; }
 body {
   margin: 0;
   background: var(--white);
@@ -309,6 +310,7 @@ footer .logo { background: transparent; padding: 0; }
 }
 
 @media (max-width: 620px) {
+  #services, #process, #technology, #faq { scroll-margin-top: -30px; }
   .container { width: min(100% - 32px, 1180px); }
   .section { padding: 34px 0; }
   .section-heading { margin-bottom: 40px; }
