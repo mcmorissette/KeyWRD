@@ -367,8 +367,8 @@ export default function Home() {
               <OpenContactLink className="text-link">Let’s talk <Arrow /></OpenContactLink>
             </div>
             <div className="faq-list">
-              {faqs.map((faq, index) => (
-                <details key={faq.question} open={index === 0}>
+              {faqs.map((faq) => (
+                <details key={faq.question}>
                   <summary>{faq.question}<span aria-hidden="true"></span></summary>
                   <p>{faq.answer}</p>
                 </details>
