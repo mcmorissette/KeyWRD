@@ -236,8 +236,7 @@ export default function Home() {
               {services.map((service) => (
                 <article className="service-card" key={service.title}>
                   <span className="service-icon" aria-hidden="true">{service.icon}</span>
-                  <h3>{service.title}</h3><p>{service.text}</p>
-                  <OpenContactLink ariaLabel={`Ask about ${service.title}`}>Explore service <Arrow /></OpenContactLink>
+                  <div><h3>{service.title}</h3><p>{service.text}</p></div>
                 </article>
               ))}
             </div>
