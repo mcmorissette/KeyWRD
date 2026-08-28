@@ -89,7 +89,10 @@ export default function ContactForm() {
       setStatus("idle");
       setError("");
       document.getElementById("contact")?.scrollIntoView({ behavior: "smooth", block: "start" });
-      window.setTimeout(() => document.getElementById("contact-name")?.focus(), 500);
+      window.setTimeout(
+        () => document.getElementById("contact-name")?.focus({ preventScroll: true }),
+        500,
+      );
     };
     window.addEventListener("keywrd:open-contact", openContact);
     return () => window.removeEventListener("keywrd:open-contact", openContact);

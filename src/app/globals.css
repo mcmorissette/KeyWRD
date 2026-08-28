@@ -402,7 +402,7 @@ footer .logo { background: transparent; padding: 0; }
 .privacy-footer .container { display: flex; min-height: 76px; align-items: center; justify-content: space-between; color: #718095; font-size: 12px; }
 .privacy-footer a { color: #475467; font-weight: 650; }
 
-.contact-section { scroll-margin-top: 64px; background: linear-gradient(135deg, #061c52 0%, #0752ca 100%); padding: 52px 0; }
+.contact-section { scroll-margin-top: -23px; background: linear-gradient(135deg, #061c52 0%, #0752ca 100%); padding: 52px 0; }
 .contact-layout { display: grid; grid-template-columns: .9fr 1.1fr; gap: 72px; align-items: start; }
 .contact-intro { position: sticky; top: 118px; color: white; padding-top: 22px; }
 .contact-intro .eyebrow { color: #bcd4ff; }
@@ -642,6 +642,7 @@ footer .logo { background: transparent; padding: 0; }
 }
 
 @media (max-width: 620px) {
+  .contact-section { scroll-margin-top: -30px; }
   .contact-section { padding: 40px 0; }
   .contact-intro h2 { font-size: 40px; }
   .contact-intro > p:not(.eyebrow) { font-size: 15px; }
