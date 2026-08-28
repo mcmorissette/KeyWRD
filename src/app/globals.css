@@ -34,7 +34,7 @@ button, a, summary { -webkit-tap-highlight-color: transparent; }
 ::selection { background: #cfe0ff; color: #082b68; }
 
 .container { width: min(1180px, calc(100% - 48px)); margin-inline: auto; }
-.section { padding: 112px 0; }
+.section { padding: 90px 0; }
 .eyebrow {
   margin: 0 0 18px;
   color: var(--blue);
@@ -277,7 +277,7 @@ footer .logo { background: transparent; padding: 0; }
 }
 
 @media (max-width: 900px) {
-  .section { padding: 88px 0; }
+  .section { padding: 70px 0; }
   .desktop-nav, .header-cta { display: none; }
   .header-inner { justify-content: space-between; }
   .mobile-nav { display: block; }
@@ -309,7 +309,7 @@ footer .logo { background: transparent; padding: 0; }
 
 @media (max-width: 620px) {
   .container { width: min(100% - 32px, 1180px); }
-  .section { padding: 72px 0; }
+  .section { padding: 58px 0; }
   .section-heading { margin-bottom: 40px; }
   .section-heading h2, .faq-intro h2, .about-section h2 { font-size: 36px; }
   .section-heading > p:last-child, .faq-intro > p, .about-copy > p { font-size: 16px; }
