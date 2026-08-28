@@ -85,7 +85,7 @@ button, a, summary { -webkit-tap-highlight-color: transparent; }
 .text-link span { transition: transform .2s ease; }
 
 .site-header { position: sticky; z-index: 50; top: 0; border-bottom: 1px solid rgba(220, 229, 239, .9); background: rgba(255,255,255,.92); backdrop-filter: blur(14px); }
-.header-inner { display: flex; height: 76px; align-items: center; }
+.header-inner { display: flex; height: 64px; align-items: center; }
 .logo { display: inline-flex; align-items: center; }
 .logo img { display: block; width: 138px; height: auto; }
 .desktop-nav { display: flex; align-items: center; gap: 31px; margin: 0 auto; }
@@ -93,7 +93,7 @@ button, a, summary { -webkit-tap-highlight-color: transparent; }
 .desktop-nav a:hover { color: var(--blue); }
 .mobile-nav { display: none; }
 
-.hero { position: relative; overflow: hidden; padding-top: 104px; padding-bottom: 104px; }
+.hero { position: relative; overflow: hidden; padding-top: 58px; padding-bottom: 58px; }
 .hero::before { position: absolute; inset: 0; z-index: -2; background-image: radial-gradient(#d9e6f9 1px, transparent 1px); background-size: 27px 27px; opacity: .4; content: ""; mask-image: linear-gradient(to bottom, black, transparent 75%); }
 .hero-glow { position: absolute; z-index: -1; top: -230px; right: -130px; width: 680px; height: 680px; border-radius: 50%; background: radial-gradient(circle, rgba(46,129,255,.13), rgba(46,129,255,0) 67%); }
 .hero-grid { display: grid; grid-template-columns: .92fr 1.08fr; gap: 72px; align-items: center; }
@@ -259,12 +259,12 @@ button, a, summary { -webkit-tap-highlight-color: transparent; }
 .final-cta small { display: block; margin-top: 21px; color: rgba(255,255,255,.62); font-size: 11px; }
 
 footer { background: #0d1726; color: white; }
-.footer-top { display: flex; justify-content: space-between; align-items: flex-start; padding-top: 54px; padding-bottom: 42px; }
+.footer-top { display: flex; justify-content: space-between; align-items: flex-start; padding-top: 30px; padding-bottom: 24px; }
 footer .logo { background: transparent; padding: 0; }
 .footer-top > div:first-child p { max-width: 350px; margin: 17px 0 0; color: #8996a9; font-size: 13px; line-height: 1.6; }
 .footer-links { display: flex; gap: 29px; padding-top: 10px; color: #b2bcc9; font-size: 13px; }
 .footer-links a:hover { color: white; }
-.footer-bottom { display: flex; min-height: 69px; align-items: center; justify-content: space-between; border-top: 1px solid #253143; color: #718095; font-size: 11px; }
+.footer-bottom { display: flex; min-height: 48px; align-items: center; justify-content: space-between; border-top: 1px solid #253143; color: #718095; font-size: 11px; }
 
 @media (max-width: 1050px) {
   .desktop-nav { gap: 19px; }
@@ -286,10 +286,10 @@ footer .logo { background: transparent; padding: 0; }
   .mobile-nav.open .menu-toggle span:first-child { transform: translateY(7px) rotate(45deg); }
   .mobile-nav.open .menu-toggle span:nth-child(2) { opacity: 0; }
   .mobile-nav.open .menu-toggle span:last-child { transform: translateY(-7px) rotate(-45deg); }
-  .mobile-nav nav { position: absolute; top: 76px; right: 0; left: 0; display: flex; flex-direction: column; gap: 4px; border-bottom: 1px solid var(--line); background: white; padding: 18px 24px 24px; box-shadow: 0 18px 28px rgba(39,59,86,.1); }
+  .mobile-nav nav { position: absolute; top: 64px; right: 0; left: 0; display: flex; flex-direction: column; gap: 4px; border-bottom: 1px solid var(--line); background: white; padding: 18px 24px 24px; box-shadow: 0 18px 28px rgba(39,59,86,.1); }
   .mobile-nav nav > a:not(.button) { padding: 11px 2px; color: #3f4d60; font-size: 15px; font-weight: 650; }
   .mobile-nav .button { margin-top: 8px; }
-  .hero { padding-top: 76px; }
+  .hero { padding-top: 50px; padding-bottom: 50px; }
   .hero-grid { grid-template-columns: 1fr; gap: 38px; }
   .hero-copy { max-width: 720px; text-align: center; margin: 0 auto; }
   .hero-copy h1, .hero-lede { margin-inline: auto; }
@@ -314,9 +314,9 @@ footer .logo { background: transparent; padding: 0; }
   .section-heading h2, .faq-intro h2, .about-section h2 { font-size: 36px; }
   .section-heading > p:last-child, .faq-intro > p, .about-copy > p { font-size: 16px; }
   .site-header .container { width: calc(100% - 28px); }
-  .site-header, .header-inner { height: 68px; }
-  .mobile-nav nav { top: 68px; }
-  .hero { padding-top: 58px; padding-bottom: 72px; }
+  .site-header, .header-inner { height: 58px; }
+  .mobile-nav nav { top: 58px; }
+  .hero { padding-top: 36px; padding-bottom: 40px; }
   .hero-copy h1 { font-size: clamp(46px, 13.3vw, 61px); }
   .hero-lede { margin-top: 22px; font-size: 18px; }
   .hero-actions, .cta-actions { flex-direction: column; }
@@ -351,7 +351,7 @@ footer .logo { background: transparent; padding: 0; }
   .about-flow i { transform: rotate(90deg); }
   .final-cta { padding: 78px 0; }
   .final-cta h2 { font-size: 42px; }
-  .footer-top { flex-direction: column; gap: 35px; }
+  .footer-top { flex-direction: column; gap: 20px; }
   .footer-links { flex-wrap: wrap; gap: 16px 24px; }
   .footer-bottom { flex-direction: column; justify-content: center; gap: 7px; text-align: center; }
 }
@@ -399,7 +399,7 @@ footer .logo { background: transparent; padding: 0; }
 .privacy-footer .container { display: flex; min-height: 76px; align-items: center; justify-content: space-between; color: #718095; font-size: 12px; }
 .privacy-footer a { color: #475467; font-weight: 650; }
 
-.contact-section { scroll-margin-top: 76px; background: linear-gradient(135deg, #061c52 0%, #0752ca 100%); padding: 94px 0; }
+.contact-section { scroll-margin-top: 64px; background: linear-gradient(135deg, #061c52 0%, #0752ca 100%); padding: 52px 0; }
 .contact-layout { display: grid; grid-template-columns: .9fr 1.1fr; gap: 72px; align-items: start; }
 .contact-intro { position: sticky; top: 118px; color: white; padding-top: 22px; }
 .contact-intro .eyebrow { color: #bcd4ff; }
@@ -676,7 +676,7 @@ footer .logo { background: transparent; padding: 0; }
 }
 
 @media (max-width: 620px) {
-  .contact-section { padding: 70px 0; }
+  .contact-section { padding: 40px 0; }
   .contact-intro h2 { font-size: 40px; }
   .contact-intro > p:not(.eyebrow) { font-size: 15px; }
   .contact-card { border-radius: 17px; padding: 24px 18px; }
