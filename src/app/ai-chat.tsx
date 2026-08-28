@@ -125,7 +125,7 @@ function ChatContactForm({ onBack }: { onBack: () => void }) {
             <label className="follow-up-honeypot" aria-hidden="true">Fax<input name="companyFax" tabIndex={-1} autoComplete="off" /></label>
             {turnstileSiteKey ? <div className="turnstile-box" ref={turnstileRef}></div> : <p className="turnstile-note">Spam protection will be enabled for launch.</p>}
             {status === "error" && <p className="form-error" role="alert">{error}</p>}
-            <p className="follow-up-consent">By sending this form, you agree that KeyWRD may use these details to respond. See our <Link href="/privacy" scroll>Privacy Policy</Link>.</p>
+            <p className="follow-up-consent">By sending this form, you agree that KeyWRD may use these details to respond. See our <Link href="/privacy#top" scroll>Privacy Policy</Link>.</p>
             <div className="follow-up-actions"><button className="button" type="submit" disabled={status === "sending" || Boolean(turnstileSiteKey && !turnstileToken)}>{status === "sending" ? "Sending…" : "Send message"}</button><button type="button" onClick={onBack}>Cancel</button></div>
           </form>
         </>
@@ -245,7 +245,7 @@ export default function AiChat() {
               </div>
               <form className="chat-composer" onSubmit={submitMessage}><label className="sr-only" htmlFor="keywrd-chat-input">Ask KeyWRD a question</label><input id="keywrd-chat-input" value={input} maxLength={800} placeholder={limitReached ? "Daily limit reached" : "Ask a question…"} autoComplete="off" disabled={limitReached} onChange={(event) => setInput(event.target.value)} /><button type="submit" aria-label="Send question" disabled={!input.trim() || sending || limitReached}>↑</button></form>
               {!limitReached && <p className="chat-usage">{AI_DAILY_LIMIT - usage.count} custom AI {AI_DAILY_LIMIT - usage.count === 1 ? "question" : "questions"} remaining in this 24-hour period</p>}
-              <p className="chat-disclaimer">AI can make mistakes. For general information only. <a href="/privacy">Privacy</a></p>
+              <p className="chat-disclaimer">AI can make mistakes. For general information only. <a href="/privacy#top">Privacy</a></p>
             </>
           )}
         </section>

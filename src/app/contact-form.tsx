@@ -216,7 +216,7 @@ export default function ContactForm() {
                 <label className="follow-up-honeypot" aria-hidden="true">Fax<input name="companyFax" tabIndex={-1} autoComplete="off" /></label>
                 {turnstileSiteKey ? <div className="turnstile-box" ref={turnstileRef}></div> : <p className="turnstile-note">Spam protection will be enabled for launch.</p>}
                 {status === "error" && <p className="form-error" role="alert">{error}</p>}
-                <p className="follow-up-consent">By sending this form, you agree that KeyWRD may use these details to respond. See our <Link href="/privacy" scroll>Privacy Policy</Link>.</p>
+                <p className="follow-up-consent">By sending this form, you agree that KeyWRD may use these details to respond. See our <Link href="/privacy#top" scroll>Privacy Policy</Link>.</p>
                 <button className="button contact-submit" type="submit" disabled={status === "sending" || Boolean(turnstileSiteKey && !turnstileToken)}>
                   {status === "sending" ? "Sending…" : "Send message"}
                 </button>

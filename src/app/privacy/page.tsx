@@ -219,7 +219,7 @@ const sections = [
 export default function PrivacyPage() {
   return (
     <>
-      <header className="privacy-header">
+      <header className="privacy-header" id="top">
         <div className="container privacy-header-inner">
           <Link href="/" aria-label="KeyWRD home">
             <Image src="/keywrd-logo.svg" alt="KeyWRD" width={154} height={43} priority />

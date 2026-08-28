@@ -382,7 +382,7 @@ export default function Home() {
       <footer>
         <div className="container footer-top">
           <div><Logo inverse /><p>Performance advertising powered by direct expertise and smarter technology.</p></div>
-          <div className="footer-links"><a href="#services">Advertising Management</a><a href="#technology">ClickSensei</a><Link href="/privacy" scroll>Privacy</Link><OpenContactLink>Contact</OpenContactLink></div>
+          <div className="footer-links"><a href="#services">Advertising Management</a><a href="#technology">ClickSensei</a><Link href="/privacy#top" scroll>Privacy</Link><OpenContactLink>Contact</OpenContactLink></div>
         </div>
         <div className="container footer-bottom"><span>© 2026 KeyWRD. All rights reserved.</span><span>Smarter campaigns. Stronger results.</span></div>
       </footer>
