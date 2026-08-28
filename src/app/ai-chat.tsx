@@ -136,7 +136,6 @@ function ChatContactForm({ onBack }: { onBack: () => void }) {
 
 export default function AiChat() {
   const [open, setOpen] = useState(false);
-  const [invitationVisible, setInvitationVisible] = useState(true);
   const [view, setView] = useState<"chat" | "contact">("chat");
   const [messages, setMessages] = useState<ChatMessage[]>([welcomeMessage]);
   const [input, setInput] = useState("");
@@ -227,13 +226,6 @@ export default function AiChat() {
 
   return (
     <>
-      {!open && invitationVisible && (
-        <aside className="chat-invitation" aria-label="Ask KeyWRD invitation">
-          <button className="chat-invitation-dismiss" type="button" aria-label="Dismiss chat invitation" onClick={() => setInvitationVisible(false)}>×</button>
-          <strong>Ask KeyWRD</strong><p>Questions about advertising, audits, or ClickSensei? Ask our AI assistant.</p>
-          <button className="chat-invitation-open" type="button" onClick={() => { setOpen(true); setInvitationVisible(false); }}>Start a conversation <span aria-hidden="true">→</span></button>
-        </aside>
-      )}
       {open && (
         <section className="chat-panel" aria-label={view === "chat" ? "Ask KeyWRD" : "Contact KeyWRD"}>
           <header className="chat-header"><div><strong>{view === "chat" ? "Ask KeyWRD" : "Contact KeyWRD"}</strong><span>{view === "chat" ? "AI assistant · Public information" : "Send us a message"}</span></div><button type="button" aria-label="Close chat" onClick={() => setOpen(false)}>×</button></header>
@@ -258,7 +250,7 @@ export default function AiChat() {
           )}
         </section>
       )}
-      <button className="chat-launcher" type="button" aria-label={open ? "Close Ask KeyWRD" : "Open Ask KeyWRD"} aria-expanded={open} onClick={() => { setOpen((current) => !current); setInvitationVisible(false); }}><span className="chat-launcher-icon" aria-hidden="true">✦</span><span>{open ? "Close" : "Ask KeyWRD"}</span></button>
+      <button className="chat-launcher" type="button" aria-label={open ? "Close Ask KeyWRD" : "Open Ask KeyWRD"} aria-expanded={open} onClick={() => setOpen((current) => !current)}><span className="chat-launcher-icon" aria-hidden="true">✦</span><span>{open ? "Close" : "Ask KeyWRD"}</span></button>
     </>
   );
 }

@@ -452,43 +452,6 @@ footer .logo { background: transparent; padding: 0; }
   background: var(--blue);
   font-size: 17px;
 }
-.chat-invitation {
-  position: fixed;
-  z-index: 99;
-  right: 24px;
-  bottom: 88px;
-  width: min(330px, calc(100vw - 32px));
-  border: 1px solid #d7e1ee;
-  border-radius: 17px;
-  background: white;
-  padding: 18px 46px 17px 19px;
-  box-shadow: 0 22px 60px rgba(17, 42, 77, .2);
-}
-.chat-invitation strong { display: block; color: var(--ink); font-size: 15px; }
-.chat-invitation p { margin: 6px 0 12px; color: #657287; font-size: 12px; line-height: 1.5; }
-.chat-invitation-dismiss {
-  position: absolute;
-  top: 9px;
-  right: 10px;
-  width: 28px;
-  height: 28px;
-  border: 0;
-  border-radius: 50%;
-  background: #f1f4f8;
-  color: #64748b;
-  font-size: 19px;
-  line-height: 1;
-  cursor: pointer;
-}
-.chat-invitation-open {
-  border: 0;
-  background: transparent;
-  color: var(--blue);
-  padding: 0;
-  font-size: 12px;
-  font-weight: 740;
-  cursor: pointer;
-}
 .chat-panel {
   position: fixed;
   z-index: 100;
@@ -682,7 +645,6 @@ footer .logo { background: transparent; padding: 0; }
   .contact-intro > p:not(.eyebrow) { font-size: 15px; }
   .contact-card { border-radius: 17px; padding: 24px 18px; }
   .chat-launcher { right: 16px; bottom: 15px; }
-  .chat-invitation { right: 12px; bottom: 80px; width: calc(100vw - 24px); }
   .chat-panel { right: 12px; bottom: 80px; width: calc(100vw - 24px); max-height: calc(100dvh - 94px); border-radius: 17px; }
   .chat-header { min-height: 68px; }
   .chat-messages { min-height: 190px; }
