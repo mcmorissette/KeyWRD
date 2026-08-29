@@ -84,6 +84,7 @@ export async function POST(request: Request) {
 
     const resendApiKey = process.env.RESEND_API_KEY;
     const fromEmail = process.env.CONTACT_FROM_EMAIL;
+    const toEmail = process.env.CONTACT_TO_EMAIL || "mc@keywrd.ca";
     if (!resendApiKey || !fromEmail) {
       return Response.json({ error: "The follow-up form is being connected. Please try again soon." }, { status: 503 });
     }
@@ -96,7 +97,7 @@ export async function POST(request: Request) {
       },
       body: JSON.stringify({
         from: `KeyWRD Website <${fromEmail}>`,
-        to: ["mc@keywrd.ca"],
+        to: [toEmail],
         reply_to: email,
         subject: `${reason} — ${name}`,
         html: `

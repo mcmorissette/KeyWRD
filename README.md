@@ -1,5 +1,19 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Contact form configuration
+
+The contact form sends inquiries through [Resend](https://resend.com). Add these variables to `.env.local` for local testing and to the production host's environment-variable settings before deployment:
+
+```bash
+RESEND_API_KEY=re_your_resend_api_key
+CONTACT_FROM_EMAIL=inquiries@send.keywrd.ca
+CONTACT_TO_EMAIL=mc@keywrd.ca
+NEXT_PUBLIC_TURNSTILE_SITE_KEY=your_turnstile_site_key
+TURNSTILE_SECRET_KEY=your_turnstile_secret_key
+```
+
+`CONTACT_FROM_EMAIL` must be an address on a domain verified in Resend. Inquiries will arrive at `CONTACT_TO_EMAIL`, and replying to that message replies directly to the visitor.
+
 ## Getting Started
 
 First, run the development server:
