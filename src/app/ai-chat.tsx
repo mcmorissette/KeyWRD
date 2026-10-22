@@ -235,6 +235,9 @@ export default function AiChat() {
                 {messages.map((message, index) => (
                   <div className={`chat-message ${message.role}`} key={`${message.role}-${index}`}>
                     {message.content}
+                    {message.role === "assistant" && index > 0 && index === messages.length - 1 && (
+                      <p className="chat-follow-up">Do you have another question?</p>
+                    )}
                     {message.offerContact && <button className="chat-contact-option" type="button" onClick={() => setView("contact")}>Contact KeyWRD →</button>}
                   </div>
                 ))}
