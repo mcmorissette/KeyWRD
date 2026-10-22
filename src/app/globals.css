@@ -94,7 +94,7 @@ button, a, summary { -webkit-tap-highlight-color: transparent; }
 .desktop-nav a:hover { color: var(--blue); }
 .mobile-nav { display: none; }
 
-.hero { position: relative; overflow: hidden; padding-top: 18px; padding-bottom: 32px; }
+.hero { position: relative; overflow: hidden; padding-block: 50px; }
 .hero::before { position: absolute; inset: 0; z-index: -2; background-image: radial-gradient(#d9e6f9 1px, transparent 1px); background-size: 27px 27px; opacity: .4; content: ""; mask-image: linear-gradient(to bottom, black, transparent 75%); }
 .hero-glow { position: absolute; z-index: -1; top: -230px; right: -130px; width: 680px; height: 680px; border-radius: 50%; background: radial-gradient(circle, rgba(46,129,255,.13), rgba(46,129,255,0) 67%); }
 .hero-grid { display: grid; grid-template-columns: .92fr 1.08fr; gap: 72px; align-items: center; }
@@ -291,7 +291,7 @@ footer .logo { background: transparent; padding: 0; }
   .mobile-nav nav { position: absolute; top: 64px; right: 0; left: 0; display: flex; flex-direction: column; gap: 4px; border-bottom: 1px solid var(--line); background: white; padding: 18px 24px 24px; box-shadow: 0 18px 28px rgba(39,59,86,.1); }
   .mobile-nav nav > a:not(.button) { padding: 11px 2px; color: #3f4d60; font-size: 15px; font-weight: 650; }
   .mobile-nav .button { margin-top: 8px; }
-  .hero { padding-top: 26px; padding-bottom: 40px; }
+  .hero { padding-block: 46px; }
   .hero-grid { grid-template-columns: 1fr; gap: 38px; }
   .hero-copy { max-width: 720px; text-align: center; margin: 0 auto; }
   .hero-copy h1, .hero-lede { margin-inline: auto; }
@@ -319,7 +319,7 @@ footer .logo { background: transparent; padding: 0; }
   .site-header .container { width: calc(100% - 28px); }
   .site-header, .header-inner { height: 58px; }
   .mobile-nav nav { top: 58px; }
-  .hero { padding-top: 26px; padding-bottom: 34px; }
+  .hero { padding-block: 40px; }
   .hero-copy h1 { font-size: clamp(46px, 13.3vw, 61px); }
   .hero-lede { margin-top: 22px; font-size: 18px; }
   .hero-actions, .cta-actions { flex-direction: column; }
