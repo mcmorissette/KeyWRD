@@ -35,7 +35,7 @@ button, a, summary { -webkit-tap-highlight-color: transparent; }
 ::selection { background: #cfe0ff; color: #082b68; }
 
 .container { width: min(1180px, calc(100% - 48px)); margin-inline: auto; }
-.section { padding: 50px 0; }
+.section { padding: 80px 0; }
 .eyebrow {
   margin: 0 0 18px;
   color: var(--blue);
@@ -279,7 +279,7 @@ footer .logo { background: transparent; padding: 0; }
 }
 
 @media (max-width: 900px) {
-  .section { padding: 40px 0; }
+  .section { padding: 64px 0; }
   .desktop-nav, .header-cta { display: none; }
   .header-inner { justify-content: space-between; }
   .mobile-nav { display: block; }
@@ -312,7 +312,7 @@ footer .logo { background: transparent; padding: 0; }
 @media (max-width: 620px) {
   #services, #process, #technology, #faq { scroll-margin-top: -30px; }
   .container { width: min(100% - 32px, 1180px); }
-  .section { padding: 34px 0; }
+  .section { padding: 50px 0; }
   .section-heading { margin-bottom: 40px; }
   .section-heading h2, .faq-intro h2, .about-section h2 { font-size: 36px; }
   .section-heading > p:last-child, .faq-intro > p, .about-copy > p { font-size: 16px; }
@@ -428,7 +428,7 @@ footer .logo { background: transparent; padding: 0; }
 .privacy-footer .container { display: flex; min-height: 76px; align-items: center; justify-content: space-between; color: #718095; font-size: 12px; }
 .privacy-footer a { color: #475467; font-weight: 650; }
 
-.contact-section { scroll-margin-top: -23px; background: linear-gradient(135deg, #061c52 0%, #0752ca 100%); padding: 52px 0; }
+.contact-section { scroll-margin-top: -23px; background: linear-gradient(135deg, #061c52 0%, #0752ca 100%); padding: 72px 0; }
 .contact-layout { display: grid; grid-template-columns: .9fr 1.1fr; gap: 72px; align-items: start; }
 .contact-intro { position: sticky; top: 118px; color: white; padding-top: 22px; }
 .contact-intro .eyebrow { color: #bcd4ff; }
@@ -669,7 +669,7 @@ footer .logo { background: transparent; padding: 0; }
 
 @media (max-width: 620px) {
   .contact-section { scroll-margin-top: -30px; }
-  .contact-section { padding: 40px 0; }
+  .contact-section { padding: 50px 0; }
   .contact-intro h2 { font-size: 40px; }
   .contact-intro > p:not(.eyebrow) { font-size: 15px; }
   .contact-card { border-radius: 17px; padding: 24px 18px; }
