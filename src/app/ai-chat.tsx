@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { FormEvent, useEffect, useRef, useState } from "react";
+import { FormEvent, Fragment, useEffect, useRef, useState } from "react";
 
 type ChatMessage = { role: "user" | "assistant"; content: string; offerContact?: boolean };
 type DailyUsage = { count: number; resetAt: number };
@@ -143,8 +143,10 @@ export default function AiChat() {
   const [error, setError] = useState("");
   const [visitorId, setVisitorId] = useState("");
   const [usage, setUsage] = useState<DailyUsage>({ count: 0, resetAt: 0 });
+  const [followUpResponse, setFollowUpResponse] = useState<{ messageIndex: number; answer: "yes" | "no" } | null>(null);
   const messagesRef = useRef<HTMLDivElement>(null);
   const limitReached = usage.count >= AI_DAILY_LIMIT;
+  const remainingStarters = starters.filter((starter) => !messages.some((message) => message.role === "user" && message.content === starter));
 
   useEffect(() => {
     const initialization = window.setTimeout(() => {
@@ -164,7 +166,7 @@ export default function AiChat() {
   useEffect(() => {
     if (!open || view !== "chat") return;
     messagesRef.current?.scrollTo({ top: messagesRef.current.scrollHeight, behavior: "smooth" });
-  }, [messages, open, sending, view, limitReached]);
+  }, [messages, open, sending, view, limitReached, followUpResponse]);
 
   useEffect(() => {
     if (!usage.resetAt || usage.resetAt <= currentTimestamp()) return;
@@ -233,13 +235,31 @@ export default function AiChat() {
             <>
               <div className="chat-messages" ref={messagesRef} aria-live="polite">
                 {messages.map((message, index) => (
-                  <div className={`chat-message ${message.role}`} key={`${message.role}-${index}`}>
-                    {message.content}
-                    {message.role === "assistant" && index > 0 && index === messages.length - 1 && (
-                      <p className="chat-follow-up">Do you have another question?</p>
+                  <Fragment key={`${message.role}-${index}`}>
+                    <div className={`chat-message ${message.role}`}>
+                      {message.content}
+                      {message.offerContact && <button className="chat-contact-option" type="button" onClick={() => setView("contact")}>Contact KeyWRD →</button>}
+                    </div>
+                    {message.role === "assistant" && index > 0 && index === messages.length - 1 && followUpResponse?.messageIndex !== index && (
+                      <div className="chat-message assistant chat-follow-up-message">
+                        <strong>Do you have another question?</strong>
+                        <div className="chat-follow-up-actions">
+                          <button type="button" onClick={() => setFollowUpResponse({ messageIndex: index, answer: "yes" })}>Yes</button>
+                          <button type="button" onClick={() => setFollowUpResponse({ messageIndex: index, answer: "no" })}>No</button>
+                        </div>
+                      </div>
                     )}
-                    {message.offerContact && <button className="chat-contact-option" type="button" onClick={() => setView("contact")}>Contact KeyWRD →</button>}
-                  </div>
+                    {message.role === "assistant" && index === messages.length - 1 && followUpResponse?.messageIndex === index && followUpResponse.answer === "yes" && (
+                      <div className="chat-starters chat-follow-up-starters" aria-label="Suggested follow-up questions">
+                        {remainingStarters.length > 0
+                          ? remainingStarters.map((starter) => <button type="button" key={starter} onClick={() => void sendMessage(starter)}>{starter}</button>)
+                          : <p>Type your next question in the field below.</p>}
+                      </div>
+                    )}
+                    {message.role === "assistant" && index === messages.length - 1 && followUpResponse?.messageIndex === index && followUpResponse.answer === "no" && (
+                      <div className="chat-message assistant chat-closing-message">Thanks for chatting with KeyWRD. You can come back anytime.</div>
+                    )}
+                  </Fragment>
                 ))}
                 {messages.length === 1 && <div className="chat-starters" aria-label="Suggested questions">{starters.map((starter) => <button type="button" key={starter} onClick={() => void sendMessage(starter)}>{starter}</button>)}</div>}
                 {sending && <div className="chat-message chat-typing">KeyWRD is thinking…</div>}

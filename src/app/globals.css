@@ -548,14 +548,35 @@ footer .logo { background: transparent; padding: 0; }
   color: white;
 }
 .chat-message.assistant { align-self: flex-start; }
-.chat-follow-up {
-  margin: 9px 0 0;
-  padding-top: 8px;
-  border-top: 1px solid #e7ecf3;
-  color: #718095;
-  font-size: 11px;
-  font-weight: 600;
+.chat-follow-up-message { min-width: 220px; }
+.chat-follow-up-message strong {
+  display: block;
+  color: var(--ink);
+  font-size: 12px;
 }
+.chat-follow-up-actions {
+  display: flex;
+  gap: 7px;
+  margin-top: 10px;
+}
+.chat-follow-up-actions button {
+  min-width: 64px;
+  border: 1px solid #b9cbe3;
+  border-radius: 8px;
+  background: white;
+  color: #4d6078;
+  padding: 7px 13px;
+  font-size: 11px;
+  font-weight: 730;
+  cursor: pointer;
+}
+.chat-follow-up-actions button:first-child {
+  border-color: var(--blue);
+  background: var(--blue);
+  color: white;
+}
+.chat-follow-up-actions button:hover { transform: translateY(-1px); }
+.chat-closing-message { color: #64748b; font-size: 12px; }
 .chat-contact-option {
   display: block;
   margin-top: 10px;
@@ -600,6 +621,12 @@ footer .logo { background: transparent; padding: 0; }
   cursor: pointer;
 }
 .chat-starters button:hover { border-color: var(--blue); color: var(--blue); }
+.chat-follow-up-starters p {
+  margin: 0;
+  color: #718095;
+  font-size: 11px;
+  text-align: center;
+}
 .chat-usage {
   margin: 0;
   color: #7a8798;
