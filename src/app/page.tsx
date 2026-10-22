@@ -3,6 +3,7 @@ import Link from "next/link";
 import AiChat from "./ai-chat";
 import ContactForm, { OpenContactButton, OpenContactLink } from "./contact-form";
 import MobileNav from "./mobile-nav";
+import ScrollReveal from "./scroll-reveal";
 
 const services = [
   {
@@ -184,6 +185,7 @@ function HeroDashboard() {
 export default function Home() {
   return (
     <>
+      <ScrollReveal />
       <Header />
       <main id="top">
         <section className="hero section">
